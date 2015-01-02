@@ -16,9 +16,12 @@
 }
  
 code {
+	display: inline-block;
   font-family: 'Courier', monospace;
   font-size: 14px;
-  color: #999
+  color: #999;
+  background-color: $lightGray;
+  padding: 0.2em 0.5em;
 }
  
 // Solarized Light Pygments 

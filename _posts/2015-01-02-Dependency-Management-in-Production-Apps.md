@@ -33,6 +33,6 @@ Let's suppose your project requires a specific version of a module, but that mod
 
 Avoid that headache by installing the dependency and its sub-dependencies in development, develop and test, then commit all of those dependencies and pull down an identical version in production. As an engineer I want to minimize the number of descrepancies between my development and production environment, not introduce new complexity to save pennies on disk space.
 
-(If you still want to use NPM for all dependencies, you can use `npm shrinkwrap` to [lock-in all sub-dependencies with the version used while you're developing](https://docs.npmjs.com/cli/shrinkwrap). I would like to use this a bit in my personal work -- I'm willing to admit my preferences may be outdated!)
-
 Insisting on a dependency manifest seems needlessly DRY. ***Is our real bottleneck as engineers the disk space of our repository or the time to hunt down and fix a broken dependency when a new instance gets deployed?*** And if your goal is to minimize new developer learning curve, do you really want to throw the new guy into debugging an obscure dependency-requirement discrepancy?
+
+(If you still want to use NPM for all dependencies, you can use `npm shrinkwrap` to [lock-in all sub-dependencies with the version used while you're developing](https://docs.npmjs.com/cli/shrinkwrap). I would like to use this a bit in my personal work -- I'm willing to admit my preferences may be behind the rest of the Node community!)

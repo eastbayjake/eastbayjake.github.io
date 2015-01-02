@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Google Locations NPM Module
+date: October 8, 2014
 ---
 
 Last month one of my projects needed to search for information about businesses, particularly if you only have a phone number. My first thought was that the [Google Places API](https://developers.google.com/places/) might be helpful, but I was disappointed to discover that you can't query directly by phone number. Instead the lookup is broken into several steps, beginning with a generic query for places near a given geocoordinate and ending with several individual follow-up requests for more details about each Google Place, with each of those detail objects containing a business phone number.

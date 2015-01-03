@@ -110,9 +110,14 @@ img {
   max-width: 100%;
 }
 
+h1 .title {
+  margin-bottom: 0px;
+}
+
 .date {
   font-style: italic;
   color: $gray;
+  margin-bottom: 10px;
 }
 
 // Specify the color of the selection

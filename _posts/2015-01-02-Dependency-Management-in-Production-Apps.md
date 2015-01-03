@@ -2,7 +2,7 @@
 layout: post
 title: Dependency Management in Production Apps
 date: January 2, 2015
-intro: I'm loving [The Twelve-Factor App](http://12factor.net) guide to best practices for web applications. Its prose is concise and readable, avoiding the technical density that limits the audience for many excellent technical write-ups. I appreciate that the authors remained language-agnostic, choosing examples from several languages to avoid coming off as merely "Best Practices for [LANGUAGE] Web Development". It aimed for a wide audience and it deserves to be widely read. \n \n But I disagree with some of their best practices in *[Dependencies](http://12factor.net/dependencies)*.
+intro: I'm loving The Twelve-Factor App guide to best practices for web applications, but I disagree with some of their best practices for dependency management.
 ---
 
 I'm loving [The Twelve-Factor App](http://12factor.net) guide to best practices for web applications. Its prose is concise and readable, avoiding the technical density that limits the audience for many excellent technical write-ups. I appreciate that the authors remained language-agnostic, choosing examples from several languages to avoid coming off as merely "Best Practices for [LANGUAGE] Web Development". It aimed for a wide audience and it deserves to be widely read.

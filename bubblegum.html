@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>Subtitles</title>
+		<style>
+			html {
+				padding: 0;
+				box-sizing: border-box;
+			}
+		  video {
+/*		  	height: 100%;*/
+		  	display: block;
+		  	width: 1000px;
+		  	margin: 0 auto;
+		  }
+			#transcript {
+				position: relative;
+				width: 100%;
+				height: 105px;
+				padding: 10px;
+				bottom: 125px;
+				color: #ff0;
+				font-size: 32px;
+				font-family: sans-serif;
+				text-align: center;
+			}
+			#transcript > div {
+				height: 35px;
+				line-height: 35px;
+			}
+			#restart {
+				position: absolute;
+				visibility: hidden;
+				z-index: 100;
+				cursor: pointer;
+				top: 10px;
+				height: 60px;
+				width: 60px;
+				border-radius: 60px;
+				background-color: #00ff00;
+			}
+		</style>
+	</head>
+	<body>
+	  <div>
+	  	<div id="restart"></div>
+			<video id="video" autoplay></video>
+			<div id="transcript">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// Put event listeners into place
+			window.addEventListener("DOMContentLoaded", function() {
+				// Grab elements, create settings, etc.
+				var recognition = null;
+				var video = document.getElementById("video");
+				var transcript = document.getElementById("transcript");
+				var restart = document.getElementById("restart");
+				restart.onclick = function(){
+					if (recognition) recognition.start();
+					this.style.visibility = 'hidden';
+				};
+				var line1 = transcript.children[0];
+				var line2 = transcript.children[1];
+				var line3 = transcript.children[2];
+				var transcript_text = '';
+				var videoObj = { video: true };
+				function errBack(error){
+					console.log(error);
+					console.log("Video capture error: ", error.code); 
+				}
+				function formatResult(s){
+					if (String.prototype.hasOwnProperty('trimLeft')) s = s.trimLeft();
+    			return s[0].toUpperCase() + s.slice(1) + ". ";
+				}
+				function updateSubtitles(s){
+					line1.innerText = line2.innerText;
+					line2.innerText = line3.innerText;
+					line3.innerText = s;
+				}
+
+				// Put video listeners into place
+				if(navigator.getUserMedia) { // Standard
+					navigator.getUserMedia(videoObj, function(stream) {
+						video.src = stream;
+						video.play();
+					}, errBack);
+				} else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+					navigator.webkitGetUserMedia(videoObj, function(stream){
+						video.src = window.webkitURL.createObjectURL(stream);
+						video.play();
+						restart.style.visibility = 'visible';
+					}, errBack);
+				}
+				else if(navigator.mozGetUserMedia) { // Firefox-prefixed
+					console.log(3);
+					navigator.mozGetUserMedia(videoObj, function(stream){
+						video.src = window.URL.createObjectURL(stream);
+						video.play();
+					}, errBack);
+				}
+
+				if (window.webkitSpeechRecognition) {
+				  recognition = new webkitSpeechRecognition();
+				  recognition.continuous = true;
+				  recognition.interimResults = false;
+				  recognition.lang = 'en-US';
+				  recognition.onstart = function() {
+				  	console.log("BEGIN RECORDING");
+				  };
+				  recognition.onresult = function(event) {
+				  	for (var i = event.resultIndex; i < event.results.length; ++i) {
+					    if (event.results[i].isFinal) {
+					    	console.log("FINAL: ", event.results[i][0].transcript);
+					      updateSubtitles(formatResult(event.results[i][0].transcript));
+					    }
+					  }
+					};
+				  recognition.onerror = function(event) {
+				  	console.log("SPEECH RECOGNITION ERROR: ", event);
+				  };
+				  recognition.onend = function() {
+				  	console.log("DONE RECORDING");
+				  	restart.style.visibility = 'visible';
+				  };
+				}
+			});
+		</script>
+	</body>
+</html>

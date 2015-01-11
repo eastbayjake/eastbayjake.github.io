@@ -6,18 +6,15 @@
 				padding: 0;
 				box-sizing: border-box;
 			}
+			body {
+				margin: 0;
+			}
 		  video {
-/*		  	height: 100%;*/
-		  	display: block;
-		  	width: 1000px;
-		  	margin: 0 auto;
+		  	height: 100%;
 		  }
 			#transcript {
-				position: relative;
-				width: 100%;
-				height: 105px;
-				padding: 10px;
-				bottom: 125px;
+				position: absolute;
+				bottom: 100px;
 				color: #ff0;
 				font-size: 32px;
 				font-family: sans-serif;
@@ -92,6 +89,9 @@
 						video.src = window.webkitURL.createObjectURL(stream);
 						video.play();
 						restart.style.visibility = 'visible';
+						setTimeout(function(){
+							transcript.style.width = video.clientWidth;
+						}, 3000);
 					}, errBack);
 				}
 				else if(navigator.mozGetUserMedia) { // Firefox-prefixed

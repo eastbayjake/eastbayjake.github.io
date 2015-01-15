@@ -10,13 +10,17 @@ I recently installed the Heroku toolbelt and was surprised to see my bash settin
 But it's not a big deal. Here's how I fixed it:
 
 (1) Open a terminal window
+
 (2) Enter `cd` to go to your home directory
+
 (3) Use your editor of choice to open .bash_profile. If you like vim, the command is `vi .bash_profile`
 
 ![]({{ site.url }}/images/heroku-bash-hash-before.png)
 
 (4) Remove the offending "### Added by Heroku Toolbelt" comment. (You may find these [vim commands](http://fprintf.net/vimCheatSheet.html) useful.)
+
 (5) Save and exit. The vi command is `ZZ` (Shift+Z Shift+Z).
+
 (6) Close and reopen your terminal window.
 
 If you `cd` into your home directory and enter `cat .bash_profile` you should see your restored bash settings

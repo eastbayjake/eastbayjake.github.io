@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/eastbayjake
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://eastbayjake.com
+  * I am eastbayjake (https://keybase.io/eastbayjake) on keybase.
+  * I have a public key with fingerprint 172E EAA4 BE2B EDBD 9F36  E34E AB73 E03B C1AA 7535
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "172eeaa4be2bedbd9f36e34eab73e03bc1aa7535",
+            "host": "keybase.io",
+            "key_id": "ab73e03bc1aa7535",
+            "kid": "01015248df6736af67f04a242e5a559cead1ffba67b2042575da98cf24f2ea04edbf0a",
+            "uid": "345ed9aea00c8194a5b5d3e3e20e3e19",
+            "username": "eastbayjake"
+        },
+        "service": {
+            "hostname": "eastbayjake.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1424818115,
+    "expire_in": 157680000,
+    "prev": "d0732de68050ee3c1d182e10c17e5833eee5d800e587f668baa5607382a4b420",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.4
+Comment: https://keybase.io/crypto
+
+yMIZAnicbVJdSBRRFF6z2lrKMjYks8iJiGSVuXPn7sxuEaRQUZRYYUTBcu/MGXey
+3dn2z0QiULQygvwp+8EgehDsoai2v4c0tywQoyQqIx+iHhbsh7IMC6w7Uk91H87l
+nPN93z3n3HN/brbDldUyMTKYi868yxq4tz7h2PH+V7pOYJZeK/jrhGqYugwzXAXR
+SNQMxwW/gBQJgFKZgcRAZ7rPwF7AMlCmYBAx0xClCsFE8AhBK2YzuAyjMSgxLR7j
+TsDUefQ/+OqphIhERCRZ1Q2vgr2UW0OUqSRLQCghPg2ojgyDUa/CJFGWiEJ06lM1
+Q5INCago86IMkXK5xJQclgnoPsozoqYin0wJIzoGDJLIDfLZwBhEwzQEHA00Fme0
+di+tBuGgR+CJpKmBPQW7mX9BJZoV4gqRqBW3NGsfTwbj8Yjf5sZrIza4Bljgj0yA
+mWGdD5MTkhCNmVZY8COO1OKmrYtk3jVSESIeAQ5EzCgETBtBFK8q8mM/A0kuqYsK
+lnTgUSICYA3pSJUAiRpSgKgYAwDROYU7iuH1qoxS4uUcVeLfJkuiYDe2P2wJfpmX
+Sau4ZMysCtN4Isq77uvdM92R5XLMnDHNXgeHa/b8v0vydWKW40TOt7zscGv14PHX
+m7cok+6Fx37cuf3ocgqzsQuLVi8rqEj3suZmJdTZ29do3RxvSDm/tJ8vCu7LHVlR
+Nq/iZ6yjKfCguzswsubu4bcbRydvdr+wMov7Cx+6RsufnH6c23JDP3Nq+r09y3H+
+yjnXKrrON5yrL++4/uhcpjAwdjX/fTqZuljzrF1vbne8zEu9Kv54cWmi9ejnHMfi
+Nwuanm5yp5uG1nn6J/J2O5e4KctsP7JtmBXgTNuV0XTpqllrE0pFaV/VhrbQwMld
+H3ccqt98q3JVY6dafml4XqT4+ZvO8S409qzHPR68tLDI6ao8W258KsOVJcM9H75v
+3znTOXR9628dvzDZ
+=YDMG
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/eastbayjake
+
+==================================================================
